@@ -1,0 +1,7 @@
+php开启curl扩展出现Call to undefined function curl_init()。
+
+我们将extension=php_curl.dll扩展开启后，还需要将与php.exe同目录下的php7.ts.dll、libcrypto-1_1.dll、libssl-1_1.dll、nghttp2.dll、libssh2.dll这五个文件复制到Apache的bin目录下。
+
+重启apache，大功告成。
+
+php.ini可能会是;extension=curl这样，请自行修改为extension=php_curl.dll。
